@@ -1,7 +1,9 @@
 import { useState, useEffect} from "react"
 
+
 export default function Products(){
     const [products, setProducts] = useState([]);
+    const scrollToTop = () => {window.scrollTo({top: 0, behavior: 'smooth'})}
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
@@ -25,6 +27,9 @@ export default function Products(){
                                 <p>{product.category}</p>
                             </div>
                         ))}        
+                    </div>
+                    <div className="btn-container">
+                        <button onClick={scrollToTop}>Torna all'inizio</button>
                     </div>
                 </div>
             </main>

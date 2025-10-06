@@ -53,6 +53,11 @@ body{
     background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 50%) right;
     background-size: 200% 100%;
     color: black;
+
+    .navlink.active{
+        background-color: black;
+        color: white;
+    }
 }
 
 .navlink.active{
@@ -160,4 +165,29 @@ h1{
 
 .card:hover img {
     transform: scale(1.1);
+}
+
+/* Regole Bottone */
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+button{
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Gruppo", sans-serif;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    transition: 0.4s ease;
+}
+
+button:hover{
+    transform: scale(1.05);
 }
