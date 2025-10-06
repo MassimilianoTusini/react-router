@@ -16,13 +16,12 @@ export default function Products(){
             </div>
             <main>
                 <div className="container">
-                    <div className="card">
+                    <div className="card-wrapper">
                         {products.map((product)=> (
-                            <div key={product.id}>
+                            <div className="card" key={product.id}>
                                 <img src={product.image} alt={product.title} />
                                 <h2>{product.title}</h2>
-                                <p>{product.price}</p>
-                                <p>{product.description}</p>
+                                <p className="price">{product.price}€</p>
                                 <p>{product.category}</p>
                             </div>
                         ))}        
