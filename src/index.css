@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: "Gruppo", sans-serif;
+}
  /* Regole lista */
 
-ul {
+.navbar ul {
     list-style: none;
     display: flex;
     gap: 50px;
@@ -15,4 +19,52 @@ ul {
     background-color: black;
     width: 50%;
     margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.navlink{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition:all 0.4s ease;
+    padding: 10px;
+}
+
+.navlink:hover{
+    background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 50%) right;
+    background-size: 200% 100%;
+    color: black;
+}
+
+.navlink.active{
+    background-color: white;
+    color: black;
+}
+
+/* Regole Titolo */
+.title-container{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.subtitle{
+    text-align: center;
+}
+
+.navlink-go{
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
 }

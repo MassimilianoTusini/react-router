@@ -11,9 +11,9 @@ export default function Products(){
 
     return(
         <>
-            <header>
+            <div>
                 <h1>Lista dei prodotti</h1>
-            </header>
+            </div>
             <main>
                 <div className="container">
                     <div className="card">

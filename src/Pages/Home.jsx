@@ -1,9 +1,9 @@
-import "../home.css";
-
+import { NavLink } from "react-router-dom";
 export default function Home() {
     return (
-        <header>
+        <div className="title-container">
             <h1>Benvenuto nel Fake Store</h1>
-        </header>
+            <p className="subtitle">Vai ai nostri <NavLink to="/products" className="navlink-go">Prodotti</NavLink></p>
+        </div>
     )
 }
