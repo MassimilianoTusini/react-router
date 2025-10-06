@@ -1,3 +1,34 @@
+import { useState, useEffect} from "react"
+
 export default function Products(){
-    
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products')
+            .then(response => response.json())
+            .then(data => setProducts(data))
+            .catch(error => console.error("errore nel caricamento dei prodotti:", error));
+    }, []);
+
+    return(
+        <>
+            <header>
+                <h1>Lista dei prodotti</h1>
+            </header>
+            <main>
+                <div className="container">
+                    <div className="card">
+                        {products.map((product)=> (
+                            <div key={product.id}>
+                                <img src={product.image} alt={product.title} />
+                                <h2>{product.title}</h2>
+                                <p>{product.price}</p>
+                                <p>{product.description}</p>
+                                <p>{product.category}</p>
+                            </div>
+                        ))}        
+                    </div>
+                </div>
+            </main>
+        </>
+    )
 }
