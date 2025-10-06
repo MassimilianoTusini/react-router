@@ -1,21 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-const NavBar = () => {
-    return (
-        <nav>
-            <ul>
-                <li>
-                    <NavLink to = "/">Home Page</NavLink>
-                </li>
-                <li>
-                    <NavLink to = "/about">About</NavLink>
-                </li>
-                <li>
-                    <NavLink to = "/products">Products</NavLink>
-                </li>
-            </ul>
-        </nav>
-    );
+export default function Navbar() {
+  return (
+    <nav>
+      <NavLink to="/">Home</NavLink> |{" "}
+      <NavLink to="/about-us">Chi siamo</NavLink> |{" "}
+      <NavLink to="/products">Prodotti</NavLink>
+    </nav>
+  );
 };
 
-export default NavBar;
+
