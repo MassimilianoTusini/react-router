@@ -40,6 +40,7 @@ body{
     }
 }
 
+/* Regole NavLink */
 .navlink{
     color: white;
     text-decoration: none;
@@ -63,6 +64,10 @@ body{
 .navlink.active{
     background-color: white;
     color: black;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* Regole Titolo */
