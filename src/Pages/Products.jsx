@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 export default function Products(){
@@ -20,12 +21,15 @@ export default function Products(){
                 <div className="container">
                     <div className="card-wrapper">
                         {products.map((product)=> (
-                            <div className="card" key={product.id}>
+                            <Link
+                                to = {`/products/${product.id}`}
+                                className="card"
+                                key={product.id}
+                            >
                                 <img src={product.image} alt={product.title} />
                                 <h2>{product.title}</h2>
                                 <p className="price">{product.price}€</p>
-                                <p>{product.category}</p>
-                            </div>
+                            </Link>
                         ))}        
                     </div>
                     <div className="btn-container">

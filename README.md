@@ -1,16 +1,13 @@
-# React + Vite
+Esercizio di oggi: React Router Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+repo: react-router (continuiamo il lavoro di ieri)
 
-Currently, two official plugins are available:
+Consegna
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Completiamo il nostro routing aggiungendo la pagina di dettaglio prodotto!
 
-## React Compiler
+Obiettivi
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+nella pagina Prodotti, ogni prodotto deve essere cliccabile (usa <Link>)
+Aggiungiamo la pagina di dettaglio per ogni prodotto, con le informazioni prese da https://fakestoreapi.com/products/:id
+Configuriamo il routing dinamico per leggere l’id del prodotto dalla URL
