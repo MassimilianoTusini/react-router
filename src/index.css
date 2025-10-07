@@ -279,3 +279,27 @@ button:hover {
 .back-btn:hover {
     transform: scale(1.1);
 }
+
+/* Regole NotFound */
+
+.nf-cont{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    color: white;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nf-cont p{
+    font-size: 1.4rem;
+}
+
+.nf-cont h1{
+    margin: 0;
+}

@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
 import ProductDetails from "./Pages/ProductDetails.jsx";
+import NotFound from "./Pages/NotFound.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path ="/about-us" element= {<About/>}/>
           <Route path ="/products" element= {<Products/>}/>
           <Route path="/products/:id" element= {<ProductDetails/>}/>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
