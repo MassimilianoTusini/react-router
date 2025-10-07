@@ -22,18 +22,20 @@ export default function ProductDetails() {
     return (
         <>
         { product ? (
+          <div className="detail-container">
+            <h1>{product.title}</h1>
             <div className="detail-card" >
                 <img src={product.image} alt={product.title} />
                 <div className="detail-info">
-                    <h1>{product.title}</h1>
-                    <p className="price">{product.price}€</p>
-                    <p className="category">Categoria: {product.category}</p>
-                    <p className="description">{product.description}</p>
-                    <Link to="/prodotti" className="back-btn">
+                    <span className="price">{product.price}€</span>
+                    <p className="category">Category: {product.category}</p>
+                    <p className="description">Description: {product.description}</p>
+                    <Link to="/products" className="back-btn">
                         Torna ai prodotti
                     </Link>
                 </div>
             </div>
+          </div>
         ) : (<p className="loading">Caricamento...</p>)
         }   
         </>

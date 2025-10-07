@@ -1,17 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-body{
+body {
     font-family: "Gruppo", sans-serif;
 }
- /* Regole lista */
+
+/* Regole lista */
 
 .navbar ul {
     list-style: none;
@@ -27,51 +28,51 @@ body{
     box-shadow: 3px 3px 10px black;
 }
 
-@media screen and (max-width:940px){
-    .navbar ul{
+@media screen and (max-width:940px) {
+    .navbar ul {
         width: 70%;
     }
 }
 
-@media screen and (max-width:600px){
-    .navbar ul{
+@media screen and (max-width:600px) {
+    .navbar ul {
         width: 80%;
         gap: 20px;
     }
 }
 
 /* Regole NavLink */
-.navlink{
+.navlink {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 10px;
-    transition:all 0.4s ease;
+    transition: all 0.4s ease;
     padding: 10px;
 }
 
-.navlink:hover{
+.navlink:hover {
     background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 50%) right;
     background-size: 200% 100%;
     color: black;
 
-    .navlink.active{
+    .navlink.active {
         background-color: black;
         color: white;
     }
 }
 
-.navlink.active{
+.navlink.active {
     background-color: white;
     color: black;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 /* Regole Titolo */
-.title-container{
+.title-container {
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -79,16 +80,17 @@ a{
     gap: 100px;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.subtitle{
+.subtitle {
     text-align: center;
 }
 
-.navlink-go{
+.navlink-go {
     background-color: black;
     text-decoration: none;
     color: white;
@@ -144,7 +146,7 @@ h1{
     margin-bottom: 5px;
 }
 
-.price{
+.price {
     background-color: white;
     color: black;
     padding: 5px 10px;
@@ -160,7 +162,7 @@ h1{
     transform: translateY(-5px);
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
 
-    .price{
+    .price {
         background: linear-gradient(to left, rgb(0, 0, 0) 50%, rgb(255, 255, 255) 50%) right;
         background-size: 200% 100%;
         color: white;
@@ -173,13 +175,13 @@ h1{
 }
 
 /* Regole Bottone */
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: center;
     margin: 40px;
 }
 
-button{
+button {
     font-size: 1.2rem;
     text-align: center;
     font-family: "Gruppo", sans-serif;
@@ -193,6 +195,87 @@ button{
     transition: 0.4s ease;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.05);
+}
+
+
+/* Regole container Card */
+.detail-container {
+    max-width: 1020px;
+    margin: 40px auto;
+    height: 80vh;
+}
+
+/* Regole Card */
+.detail-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    gap: 40px;
+}
+.detail-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.detail-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.435);
+}
+
+/* regole testi Card */
+.detail-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.detail-info .price{
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.detail-info .price:hover {
+    transform: scale(1.2);
+}
+
+.category {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: 1rem;
+    color: rgb(177, 176, 176);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bottone "torna indietro" */
+.back-btn {
+    font-size: 1.2rem;
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
 }
