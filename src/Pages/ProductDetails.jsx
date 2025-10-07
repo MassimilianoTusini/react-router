@@ -19,7 +19,7 @@ export default function ProductDetails() {
             .then(response => response.json())
             .then(data => setProduct(data))
             .catch(() => { navigate ('/products') })
-    }, [id]);
+    }, [id, navigate]);
 
     return (
         <>
