@@ -55,11 +55,6 @@ body {
     background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 50%) right;
     background-size: 200% 100%;
     color: black;
-
-    .navlink.active {
-        background-color: black;
-        color: white;
-    }
 }
 
 .navlink.active {
@@ -69,6 +64,19 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.navlink-go {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.navlink-go:hover {
+    text-decoration: underline;
 }
 
 /* Regole Titolo */
@@ -87,15 +95,8 @@ h1 {
 }
 
 .subtitle {
+    margin-top: 50px;
     text-align: center;
-}
-
-.navlink-go {
-    background-color: black;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
 }
 
 /* Regole Card */
@@ -219,6 +220,7 @@ button:hover {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
     gap: 40px;
 }
+
 .detail-card img {
     width: 300px;
     height: 300px;
@@ -228,8 +230,8 @@ button:hover {
 }
 
 .detail-card img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.435);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.689);
 }
 
 /* regole testi Card */
@@ -238,7 +240,7 @@ button:hover {
     min-width: 300px;
 }
 
-.detail-info .price{
+.detail-info .price {
     display: inline-block;
     font-size: 1.5rem;
     background-color: black;
@@ -258,10 +260,14 @@ button:hover {
 }
 
 .description {
-    font-size: 1rem;
     color: rgb(177, 176, 176);
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.rating {
+    color: white;
+    margin-bottom: 15px;
 }
 
 /* Bottone "torna indietro" */
@@ -282,7 +288,7 @@ button:hover {
 
 /* Regole NotFound */
 
-.nf-cont{
+.nf-cont {
     width: 400px;
     height: 400px;
     background-color: black;
@@ -296,10 +302,36 @@ button:hover {
     align-items: center;
 }
 
-.nf-cont p{
+.nf-cont p {
     font-size: 1.4rem;
 }
 
-.nf-cont h1{
+.nf-cont h1 {
     margin: 0;
+}
+
+/* Regole caricamento */
+
+.spinner-cont {
+    max-width: 600px;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border-top-color: black;
+    border-radius: 2px;
+    animation: spin 1s linear infinite;
+    box-shadow: 20px 20px 1px black, -20px -20px 1px black, 20px -20px black, -20px 20px black;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

@@ -17,7 +17,14 @@ export default function ProductDetails() {
 
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(response => response.json())
-            .then(data => setProduct(data))
+            .then(data => {
+
+            // caricamento finto
+            setTimeout(() => {
+                setProduct(data);
+            }, 700);
+            })
+
             .catch(() => { navigate ('/products') })
     }, [id, navigate]);
 
@@ -32,13 +39,16 @@ export default function ProductDetails() {
                     <span className="price">{product.price}€</span>
                     <p className="category">Category: {product.category}</p>
                     <p className="description">Description: {product.description}</p>
+                    <p className="rating">Customer's rating: {product.rating.rate}</p>
                     <Link to="/products" className="back-btn">
                         Torna ai prodotti
                     </Link>
                 </div>
             </div>
           </div>
-        ) : (<p className="loading">Caricamento...</p>)
+        ) : (<div className="spinner-cont">
+                <div className="spinner"></div>
+            </div>)
         }   
         </>
     )
